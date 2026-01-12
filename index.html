@@ -15,7 +15,7 @@
             <div class="nav-brand">MATIAS MEIRA</div>
             <ul class="nav-links">
                 <li><a href="#hero">Inicio</a></li>
-                <li><a href="#about">Perfil</a></li>
+                <li><a href="#about">Sobre Mí</a></li>
                 <li><a href="#projects">Proyectos</a></li>
                 <li><a href="#skills">Stack</a></li>
                 <li><a href="#contact">Contacto</a></li>
@@ -27,32 +27,39 @@
         <section id="hero" class="snap-section hero">
             <div class="container">
                 <h1 class="fade-in">Matias Ezequiel Meira</h1>
-                <h2 class="fade-in">Backend Java Developer</h2>
-                <p class="hero-desc fade-in">Construyendo los cimientos de aplicaciones escalables mediante APIs REST eficientes y arquitecturas de datos sólidas.</p>
+                <h2 class="fade-in">Backend Developer</h2>
+                <p class="hero-desc fade-in">Especializado en arquitecturas robustas y optimización de procesos mediante APIs eficientes.</p>
+                
+                <div class="hero-socials fade-in">
+                    <a href="https://linkedin.com/in/matias-ezequiel-meira-b949642a5/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/matiasmeira" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:matiasezequielmeira@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+
                 <div class="hero-cta fade-in">
-                    <a href="#projects" class="btn btn-primary">Explorar Proyectos</a>
-                    <a href="mailto:matiasezequielmeira@gmail.com" class="btn btn-outline">Contacto Directo</a>
+                    <a href="#projects" class="btn btn-primary">Ver Portafolio</a>
+                    <a href="#contact" class="btn btn-outline">Hablemos</a>
                 </div>
             </div>
         </section>
 
         <section id="about" class="snap-section about">
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-text">
-                        <h2 class="section-title">Sobre mí</h2>
-                        <p>Desarrollador Backend especializado en el ecosistema <strong>Java/Spring Boot</strong>. Cursando la Licenciatura en Sistemas en la <strong>UNGS</strong>.</p>
-                        <p>Mi valor principal es la capacidad de diseñar sistemas que no solo funcionan, sino que son fáciles de mantener y escalar.</p>
+            <div class="container about-large">
+                <h2 class="section-title">Sobre Mí</h2>
+                <div class="about-grid-expanded">
+                    <div class="about-text-content">
+                        <p>Desarrollador Backend con un fuerte enfoque en el ecosistema <strong>Java/SpringBoot</strong> y experiencia en implementaciones con <strong>Python/Django</strong>. Mi formación en la <strong>Universidad Nacional de General Sarmiento</strong> me ha permitido desarrollar una mentalidad analítica para la resolución de problemas complejos.</p>
+                        <p>Me especializo en transformar necesidades de negocio en sistemas técnicos escalables, priorizando siempre la integridad de los datos y el rendimiento del servidor.</p>
                     </div>
-                    <div class="education-card">
-                        <h3>Situación Académica</h3>
-                        <div class="edu-item">
-                            <span class="year">Actualidad</span>
-                            <p><strong>Licenciatura en Sistemas</strong><br>Univ. Nac. General Sarmiento</p>
+                    <div class="education-card-large">
+                        <h3>Trayectoria Académica</h3>
+                        <div class="edu-item-large highlight-border">
+                            <span class="year">2026 (Final en Feb)</span>
+                            <p><strong>Técnico Universitario en Informática</strong><br>UNGS - Buenos Aires, Argentina</p>
                         </div>
-                        <div class="edu-item highlight-border">
-                            <span class="year">Feb 2026 (Final Pendiente)</span>
-                            <p><strong>Técnico Univ. en Informática</strong><br>UNGS</p>
+                        <div class="edu-item-large">
+                            <span class="year">En Curso</span>
+                            <p><strong>Licenciatura en Sistemas</strong><br>Univ. Nac. General Sarmiento</p>
                         </div>
                     </div>
                 </div>
@@ -61,25 +68,37 @@
 
         <section id="projects" class="snap-section projects">
             <div class="container">
-                <h2 class="section-title">Proyectos de Ingeniería</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <i class="fas fa-warehouse project-icon"></i>
-                        <h3>Gestión de Inventario</h3>
-                        <p>Control de stock y órdenes para Pyme alimenticia.</p>
-                        <div class="tech-stack">
-                            <span>Spring Boot</span><span>PostgreSQL</span>
+                <h2 class="section-title title-white">Proyectos de Ingeniería</h2>
+                <div class="projects-grid-detailed">
+                    <div class="project-card-detailed">
+                        <div class="card-body">
+                            <i class="fas fa-warehouse project-icon-top"></i>
+                            <h3 class="title-white">Gestión de Inventario y Producción</h3>
+                            <p class="project-desc">Sistema integral desarrollado para una Pyme de alimentos congelados. El software automatiza el flujo de producción desde la entrada de materia prima hasta la salida del producto final, permitiendo un control de stock preciso y reducción de mermas.</p>
+                            <div class="tech-tags">
+                                <span>Python</span><span>Django</span><span>PostgreSQL</span>
+                            </div>
                         </div>
-                        <a href="https://github.com/matiasmeira" class="project-link">GitHub</a>
+                        <div class="project-actions">
+                            <a href="#" target="_blank" class="p-btn"><i class="fab fa-github"></i> Código</a>
+                            <a href="#" target="_blank" class="p-btn demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
                     </div>
-                    <div class="project-card">
-                        <i class="fas fa-file-invoice project-icon"></i>
-                        <h3>Automatización Plantillas</h3>
-                        <p>Generación de documentos para la liga de fútbol.</p>
-                        <div class="tech-stack">
-                            <span>Java 17</span><span>JPA</span>
+
+                    <div class="project-card-detailed">
+                        <div class="card-body">
+                            <i class="fas fa-file-invoice project-icon-top"></i>
+                            <h3 class="title-white">Generador de Plantillas - Liga Pilarense</h3>
+                            <p class="project-desc">Plataforma creada para la Asociación de Fútbol Pilaerense que automatiza la creación de documentos oficiales. Centraliza la información de jugadores y genera plantillas dinámicas reduciendo tiempos administrativos.</p>
+                            <div class="tech-tags">
+                                <span>Java</span><span>SpringBoot</span><span>PostgreSQL</span>
+                            </div>
                         </div>
-                        <a href="#" class="project-link">GitHub</a>
+                        <div class="project-actions">
+                            <a href="#" target="_blank" class="p-btn"><i class="fab fa-github"></i> Back</a>
+                            <a href="#" target="_blank" class="p-btn"><i class="fab fa-github"></i> Front</a>
+                            <a href="#" target="_blank" class="p-btn demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -88,30 +107,40 @@
         <section id="skills" class="snap-section skills">
             <div class="container">
                 <h2 class="section-title text-center">Stack Tecnológico</h2>
-                <div class="skills-grid">
-                    <div class="skill-icon-box"><i class="devicon-java-plain colored"></i><span>Java</span></div>
-                    <div class="skill-icon-box"><i class="devicon-spring-original colored"></i><span>Spring</span></div>
-                    <div class="skill-icon-box"><i class="devicon-postgresql-plain colored"></i><span>Postgres</span></div>
-                    <div class="skill-icon-box"><i class="devicon-git-plain colored"></i><span>Git Flow</span></div>
-                    <div class="skill-icon-box icon-manual">
-                        <img src="https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" alt="Postman">
-                        <span>Postman</span>
-                    </div>
+                <div class="skills-grid-clean">
+                    <div class="skill-item-clean"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+                    <div class="skill-item-clean"><i class="devicon-spring-original colored"></i><span>SpringBoot</span></div>
+                    <div class="skill-item-clean"><i class="devicon-postgresql-plain colored"></i><span>Postgres</span></div>
+                    <div class="skill-item-clean"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+                    <div class="skill-item-clean"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+                    <div class="skill-item-clean"><i class="devicon-django-plain colored"></i><span>Django</span></div>
+                    <div class="skill-item-clean"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+                    <div class="skill-item-clean"><i class="fas fa-tasks icon-scrum"></i><span>Scrum</span></div>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="snap-section contact">
-            <div class="container text-center">
-                <h2 class="section-title">Contacto</h2>
-                <p>Disponible para integrarme a equipos de desarrollo.</p>
-                <div class="contact-links">
-                    <a href="mailto:matiasezequielmeira@gmail.com">Email</a>
-                    <a href="https://linkedin.com/in/matias-ezequiel-meira-b949642a5/" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/matiasmeira" target="_blank">GitHub</a>
+            <div class="container contact-container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2 class="section-title">Contacto</h2>
+                        <p>¿Buscas sumar un desarrollador backend a tu equipo? Hablemos.</p>
+                        <div class="contact-links-vertical">
+                            <a href="mailto:matiasezequielmeira@gmail.com"><i class="fas fa-envelope"></i> matiasezequielmeira@gmail.com</a>
+                            <a href="https://linkedin.com/in/matias-ezequiel-meira-b949642a5/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                            <a href="https://github.com/matiasmeira" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <input type="text" placeholder="Nombre" required>
+                        <input type="email" placeholder="Email" required>
+                        <textarea placeholder="Tu mensaje..." rows="4" required></textarea>
+                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    </form>
                 </div>
-                <footer class="footer-inline">
-                    <p>MATIAS EZEQUIEL MEIRA &copy; 2026</p>
+                <footer class="footer-snap">
+                    <p>MATIAS EZEQUIEL MEIRA &copy; 2026 | Buenos Aires, Argentina</p>
                 </footer>
             </div>
         </section>
