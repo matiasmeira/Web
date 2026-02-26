@@ -132,10 +132,10 @@
                             <a href="https://github.com/matiasmeira" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
-                    <form class="contact-form">
-                        <input type="text" placeholder="Nombre" required>
-                        <input type="email" placeholder="Email" required>
-                        <textarea placeholder="Tu mensaje..." rows="4" required></textarea>
+                    <form id="contact-form" action="https://formspree.io/f/xqednebn" method="POST" class="contact-form">
+                        <input type="text" name="name" placeholder="Nombre" required>
+                        <input type="email" name="email" placeholder="Email" required>
+                        <textarea name="message" placeholder="Tu mensaje..." rows="4" required></textarea>
                         <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
                     </form>
                 </div>
