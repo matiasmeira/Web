@@ -1,18 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQ830JHDB8"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ZQ830JHDB8');
+    </script>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matias Meira | Backend Developer</title>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="nav-brand">MATIAS MEIRA</div>
+        <nav class="navbar" id="navbar">
+            <div class="nav-brand">&lt;Matias.Meira/&gt;</div>
             <ul class="nav-links">
                 <li><a href="#hero">Inicio</a></li>
                 <li><a href="#about">Sobre Mí</a></li>
@@ -25,15 +36,16 @@
 
     <main class="scroll-container">
         <section id="hero" class="snap-section hero">
-            <div class="container">
-                <h1 class="fade-in">Matias Ezequiel Meira</h1>
-                <h2 class="fade-in">Backend Developer</h2>
-                <p class="hero-desc fade-in">Especializado en arquitecturas robustas y optimización de procesos mediante APIs eficientes.</p>
+            <div class="container hero-container">
+                <p class="hero-greeting fade-in">Hola, mi nombre es</p>
+                <h1 class="fade-in">Matias Ezequiel Meira.</h1>
+                <h2 class="fade-in">Construyo el Backend de tus ideas.</h2>
+                <p class="hero-desc fade-in">Soy un desarrollador enfocado en arquitecturas robustas, bases de datos optimizadas y la creación de APIs seguras y eficientes que escalan.</p>
                 
                 <div class="hero-socials fade-in">
-                    <a href="https://linkedin.com/in/matias-ezequiel-meira-b949642a5/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/matiasmeira" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="mailto:matiasezequielmeira@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/matias-ezequiel-meira-b949642a5/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/matiasmeira" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="mailto:matiasezequielmeira@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
 
                 <div class="hero-cta fade-in">
@@ -45,21 +57,23 @@
 
         <section id="about" class="snap-section about">
             <div class="container about-large">
-                <h2 class="section-title">Sobre Mí</h2>
+                <h2 class="section-title fade-in"><span>01.</span> Sobre Mí</h2>
                 <div class="about-grid-expanded">
-                    <div class="about-text-content">
+                    <div class="about-text-content fade-in">
                         <p>Desarrollador Backend con un fuerte enfoque en el ecosistema <strong>Java/SpringBoot</strong> y experiencia en implementaciones con <strong>Python/Django</strong>. Mi formación en la <strong>Universidad Nacional de General Sarmiento</strong> me ha permitido desarrollar una mentalidad analítica para la resolución de problemas complejos.</p>
-                        <p>Me especializo en transformar necesidades de negocio en sistemas técnicos escalables, priorizando siempre la integridad de los datos y el rendimiento del servidor.</p>
+                        <p>Me especializo en transformar necesidades de negocio en sistemas técnicos escalables, priorizando siempre la integridad de los datos, la seguridad de la información y el rendimiento del servidor.</p>
                     </div>
-                    <div class="education-card-large">
-                        <h3>Trayectoria Académica</h3>
+                    <div class="education-card-large fade-in">
+                        <h3><i class="fas fa-graduation-cap"></i> Trayectoria Académica</h3>
                         <div class="edu-item-large highlight-border">
-                            <span class="year">2026 (Final en Feb)</span>
-                            <p><strong>Técnico Universitario en Informática</strong><br>UNGS - Buenos Aires, Argentina</p>
+                            <span class="year">2026 (Completado)</span>
+                            <p class="edu-title">Técnico Universitario en Informática</p>
+                            <p class="edu-school">UNGS - Buenos Aires, Argentina</p>
                         </div>
-                        <div class="edu-item-large">
+                        <div class="edu-item-large highlight-border secondary-border">
                             <span class="year">En Curso</span>
-                            <p><strong>Licenciatura en Sistemas</strong><br>Univ. Nac. General Sarmiento</p>
+                            <p class="edu-title">Licenciatura en Sistemas</p>
+                            <p class="edu-school">Univ. Nac. General Sarmiento</p>
                         </div>
                     </div>
                 </div>
@@ -68,36 +82,43 @@
 
         <section id="projects" class="snap-section projects">
             <div class="container">
-                <h2 class="section-title title-white">Proyectos de Ingeniería</h2>
+                <h2 class="section-title fade-in"><span>02.</span> Proyectos de Ingeniería</h2>
                 <div class="projects-grid-detailed">
-                    <div class="project-card-detailed">
+                    <div class="project-card-detailed fade-in">
                         <div class="card-body">
-                            <i class="fas fa-warehouse project-icon-top"></i>
+                            <div class="project-header">
+                                <i class="fas fa-warehouse project-icon-top"></i>
+                                <div class="project-links-top">
+                                    <a href="https://github.com/matiasmeira/Frozen_Back" target="_blank"><i class="fab fa-github"></i></a>
+                                    <a href="https://vite-react-five-red-48.vercel.app/" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
                             <h3 class="title-white">Gestión de Inventario y Producción</h3>
                             <p class="project-desc">Sistema integral desarrollado para una Pyme de alimentos congelados. El software automatiza el flujo de producción desde la entrada de materia prima hasta la salida del producto final, permitiendo un control de stock preciso y reducción de mermas.</p>
+                        </div>
+                        <div class="card-footer">
                             <div class="tech-tags">
                                 <span>Python</span><span>Django</span><span>PostgreSQL</span>
                             </div>
                         </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/matiasmeira/Frozen_Back" target="_blank" class="p-btn"><i class="fab fa-github"></i> Código</a>
-                            <a href="https://vite-react-five-red-48.vercel.app/" target="_blank" class="p-btn demo"><i class="fas fa-external-link-alt"></i> Demo</a>
-                        </div>
                     </div>
 
-                    <div class="project-card-detailed">
+                    <div class="project-card-detailed fade-in">
                         <div class="card-body">
-                            <i class="fas fa-file-invoice project-icon-top"></i>
-                            <h3 class="title-white">Generador de Plantillas - Liga Pilarense</h3>
-                            <p class="project-desc">Plataforma creada para la Asociación de Fútbol Pilaerense que automatiza la creación de documentos oficiales. Centraliza la información de jugadores y genera plantillas dinámicas reduciendo tiempos administrativos.</p>
+                            <div class="project-header">
+                                <i class="fas fa-file-invoice project-icon-top"></i>
+                                <div class="project-links-top">
+                                    <a href="https://github.com/matiasmeira/Generador-De-Plantillas-Liga-Futbol" target="_blank" title="Backend Repo"><i class="fab fa-github"></i></a>
+                                    <a href="https://front-generador-plantillas-production.up.railway.app/home" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="title-white">Generador de Plantillas (Liga Pilarense)</h3>
+                            <p class="project-desc">Plataforma creada para la Asociación de Fútbol Pilarense que automatiza la creación de documentos oficiales. Centraliza la información de jugadores y genera plantillas dinámicas reduciendo drásticamente los tiempos administrativos.</p>
+                        </div>
+                        <div class="card-footer">
                             <div class="tech-tags">
                                 <span>Java</span><span>SpringBoot</span><span>PostgreSQL</span>
                             </div>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/matiasmeira/Generador-De-Plantillas-Liga-Futbol" target="_blank" class="p-btn"><i class="fab fa-github"></i> Back</a>
-                            <a href="https://github.com/matiasmeira/Front-Generador-Plantillas" target="_blank" class="p-btn"><i class="fab fa-github"></i> Front</a>
-                            <a href="https://front-generador-plantillas-production.up.railway.app/home" target="_blank" class="p-btn demo"><i class="fas fa-external-link-alt"></i> Demo</a>
                         </div>
                     </div>
                 </div>
@@ -106,16 +127,20 @@
 
         <section id="skills" class="snap-section skills">
             <div class="container">
-                <h2 class="section-title text-center">Stack Tecnológico</h2>
+                <h2 class="section-title text-center fade-in"><span>03.</span> Stack Tecnológico</h2>
                 <div class="skills-grid-clean">
-                    <div class="skill-item-clean"><i class="devicon-java-plain colored"></i><span>Java</span></div>
-                    <div class="skill-item-clean"><i class="devicon-spring-original colored"></i><span>SpringBoot</span></div>
-                    <div class="skill-item-clean"><i class="devicon-postgresql-plain colored"></i><span>Postgres</span></div>
-                    <div class="skill-item-clean"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
-                    <div class="skill-item-clean"><i class="devicon-python-plain colored"></i><span>Python</span></div>
-                    <div class="skill-item-clean"><i class="devicon-django-plain colored"></i><span>Django</span></div>
-                    <div class="skill-item-clean"><i class="devicon-git-plain colored"></i><span>Git</span></div>
-                    <div class="skill-item-clean"><i class="fas fa-tasks icon-scrum"></i><span>Scrum</span></div>
+                    <div class="skill-item-clean fade-in"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+                    <div class="skill-item-clean fade-in"><i class="devicon-spring-original colored"></i><span>SpringBoot</span></div>
+                    
+                    <div class="skill-item-clean fade-in"><i class="fas fa-shield-alt"></i><span>Spring Security</span></div>
+                    <div class="skill-item-clean fade-in"><i class="fas fa-key"></i><span>JWT</span></div>
+                    
+                    <div class="skill-item-clean fade-in"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
+                    <div class="skill-item-clean fade-in"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+                    <div class="skill-item-clean fade-in"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+                    <div class="skill-item-clean fade-in"><i class="devicon-django-plain colored"></i><span>Django</span></div>
+                    <div class="skill-item-clean fade-in"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+                    <div class="skill-item-clean fade-in"><i class="fas fa-tasks icon-scrum"></i><span>Scrum</span></div>
                 </div>
             </div>
         </section>
@@ -123,24 +148,30 @@
         <section id="contact" class="snap-section contact">
             <div class="container contact-container">
                 <div class="contact-grid">
-                    <div class="contact-info">
-                        <h2 class="section-title">Contacto</h2>
-                        <p>¿Buscas sumar un desarrollador backend a tu equipo? Hablemos.</p>
+                    <div class="contact-info fade-in">
+                        <h2 class="section-title"><span>04.</span> Contacto</h2>
+                        <p class="contact-subtitle">¿Buscas sumar un desarrollador backend a tu equipo? Mi bandeja de entrada siempre está abierta. Ya sea que tengas una pregunta o simplemente quieras saludar, ¡haré lo posible por responderte!</p>
                         <div class="contact-links-vertical">
                             <a href="mailto:matiasezequielmeira@gmail.com"><i class="fas fa-envelope"></i> matiasezequielmeira@gmail.com</a>
                             <a href="https://linkedin.com/in/matias-ezequiel-meira-b949642a5/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                             <a href="https://github.com/matiasmeira" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
-                    <form id="contact-form" action="https://formspree.io/f/xqednebn" method="POST" class="contact-form">
-                        <input type="text" name="name" placeholder="Nombre" required>
-                        <input type="email" name="email" placeholder="Email" required>
-                        <textarea name="message" placeholder="Tu mensaje..." rows="4" required></textarea>
-                        <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                    <form id="contact-form" action="https://formspree.io/f/xqednebn" method="POST" class="contact-form fade-in">
+                        <div class="input-group">
+                            <input type="text" name="name" placeholder="Tu Nombre" required>
+                        </div>
+                        <div class="input-group">
+                            <input type="email" name="email" placeholder="Tu Email" required>
+                        </div>
+                        <div class="input-group">
+                            <textarea name="message" placeholder="¿En qué puedo ayudarte?" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
                     </form>
                 </div>
-                <footer class="footer-snap">
-                    <p>MATIAS EZEQUIEL MEIRA &copy; 2026 | Buenos Aires, Argentina</p>
+                <footer class="footer-snap fade-in">
+                    <p>Diseñado & Construido por Matias Ezequiel Meira &copy; 2026</p>
                 </footer>
             </div>
         </section>
