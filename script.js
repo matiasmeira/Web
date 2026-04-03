@@ -1,57 +1,73 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const observerOptions = { threshold: 0.4 };
+    // 1. Animaciones al hacer Scroll (Mejorado)
+    const observerOptions = { 
+        threshold: 0.1, 
+        rootMargin: "0px 0px -50px 0px" 
+    };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const elements = entry.target.querySelectorAll('.fade-in, .project-card-detailed, .skill-item-clean, .education-card-large');
-                elements.forEach((el, index) => {
-                    setTimeout(() => {
-                        el.style.opacity = "1";
-                        el.style.transform = "translateY(0)";
-                    }, index * 80);
-                });
+                entry.target.classList.add('appear');
+                // Opcional: Descomentar la siguiente línea si quieres que la animación ocurra solo 1 vez
+                // observer.unobserve(entry.target); 
+            } else {
+                // Removemos la clase para que el efecto se repita al volver a scrollear
+                entry.target.classList.remove('appear');
             }
         });
     }, observerOptions);
 
-    const sections = document.querySelectorAll('.snap-section');
-    sections.forEach(section => {
-        const elements = section.querySelectorAll('.fade-in, .project-card-detailed, .skill-item-clean, .education-card-large');
-        elements.forEach(el => {
-            el.style.opacity = "0";
-            el.style.transform = "translateY(20px)";
-            el.style.transition = "all 0.6s ease-out";
-        });
-        observer.observe(section);
+    const fadeElements = document.querySelectorAll('.fade-in');
+    fadeElements.forEach((el, index) => {
+        // Escalonar animaciones si hay múltiples elementos en bloque
+        el.style.transitionDelay = `${index % 5 * 100}ms`;
+        observer.observe(el);
     });
-});
 
-const contactForm = document.getElementById('contact-form');
+    // 2. Efecto Glassmorphism / Sombra en el Navbar al scrollear
+    const scrollContainer = document.querySelector('.scroll-container');
+    const navbar = document.getElementById('navbar');
 
-contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const button = contactForm.querySelector('button');
-    button.innerText = 'Enviando...';
-
-    const formData = new FormData(contactForm);
-    
-    try {
-        const response = await fetch(contactForm.action, {
-            method: 'POST',
-            body: formData,
-            headers: { 'Accept': 'application/json' }
-        });
-
-        if (response.ok) {
-            alert('¡Mensaje enviado con éxito! Te contactaré pronto.');
-            contactForm.reset();
+    scrollContainer.addEventListener('scroll', () => {
+        if (scrollContainer.scrollTop > 50) {
+            navbar.classList.add('scrolled');
         } else {
-            alert('Hubo un problema al enviar el mensaje.');
+            navbar.classList.remove('scrolled');
         }
-    } catch (error) {
-        alert('Error de conexión.');
-    } finally {
-        button.innerText = 'Enviar Mensaje';
+    });
+
+    // 3. Manejo del Formulario de Contacto (Formspree)
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const button = contactForm.querySelector('button');
+            const originalText = button.innerText;
+            button.innerText = 'Enviando...';
+            button.disabled = true;
+
+            const formData = new FormData(contactForm);
+            
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    alert('¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.');
+                    contactForm.reset();
+                } else {
+                    alert('Hubo un problema al enviar el mensaje. Intenta de nuevo.');
+                }
+            } catch (error) {
+                alert('Error de conexión. Revisa tu internet.');
+            } finally {
+                button.innerText = originalText;
+                button.disabled = false;
+            }
+        });
     }
 });
