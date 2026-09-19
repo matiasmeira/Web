@@ -38,11 +38,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
-    <meta name="theme-color" content="#F1F2F4">
+    <meta name="theme-color" content="#0a0a0a">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
     <script type="application/ld+json">
@@ -78,6 +78,9 @@
             <polyline fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="7 10 12 15 17 10"/>
             <line fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" x1="12" y1="15" x2="12" y2="3"/>
         </symbol>
+        <symbol id="icon-graduation-cap" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"/>
+        </symbol>
         <symbol id="icon-football" viewBox="0 0 24 24">
             <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/>
             <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 7l4.76 3.45l-1.76 5.55h-6l-1.76 -5.55l4.76 -3.45"/>
@@ -85,24 +88,25 @@
         </symbol>
     </svg>
 
-    <header>
-        <nav class="navbar">
-            <a class="nav-brand" href="#hero">Matias Meira</a>
-            <ul class="nav-links">
-                <li><a href="#about">Sobre mí</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#skills">Stack</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    <main class="scroll-container" id="main-content" tabindex="-1">
+        <header>
+            <nav class="navbar" id="navbar">
+                <a class="nav-brand" href="#hero">Matias Meira</a>
+                <ul class="nav-links">
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#about">Sobre Mí</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#skills">Stack</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <main id="main-content" tabindex="-1">
-        <section id="hero" class="hero section">
-            <div class="container hero-inner">
-                <h1 class="display hero-reveal">Matias<br>Meira</h1>
+        <section id="hero" class="snap-section hero">
+            <div class="container hero-container">
+                <h1 class="fade-in">Matias Ezequiel Meira.</h1>
 
-                <dl class="spec-block hero-reveal">
+                <dl class="spec-block fade-in">
                     <div class="spec-row">
                         <dt>Rol</dt>
                         <dd>Backend Developer (Junior)</dd>
@@ -117,129 +121,155 @@
                     </div>
                 </dl>
 
-                <p class="hero-desc hero-reveal">Diseño APIs y modelo datos en Java/Spring Boot y PostgreSQL. Proyectos verificables en GitHub.</p>
+                <p class="hero-desc fade-in">Diseño APIs y modelo datos pensando en integridad y concurrencia.</p>
 
-                <div class="hero-cta hero-reveal">
-                    <a href="#projects" class="btn btn-primary">Ver proyectos</a>
-                    <a href="assets/CV-Matias-Meira-Backend-Java.pdf" class="btn btn-outline" download>Descargar CV</a>
-                </div>
-
-                <div class="hero-socials hero-reveal">
+                <div class="hero-socials fade-in">
                     <a href="https://linkedin.com/in/matias-ezequiel-meira-b949642a5/" target="_blank" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg></a>
                     <a href="https://github.com/matiasmeira" target="_blank" aria-label="GitHub"><svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg></a>
                     <a href="mailto:matiasezequielmeira@gmail.com" aria-label="Email"><svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg></a>
                 </div>
-            </div>
-        </section>
 
-        <section id="about" class="about section">
-            <div class="container">
-                <h2>Sobre mí</h2>
-                <div class="about-text">
-                    <p>Desarrollador backend con un fuerte enfoque en el ecosistema <strong>Java/Spring Boot</strong> y experiencia en implementaciones con <strong>Python/Django</strong>. Mi formación en la <strong>Universidad Nacional de General Sarmiento</strong> me permitió desarrollar una mentalidad analítica para la resolución de problemas complejos.</p>
-                    <p>Me especializo en transformar necesidades de negocio en sistemas técnicos escalables, priorizando siempre la integridad de los datos, la seguridad de la información y el rendimiento del servidor.</p>
+                <div class="hero-cta fade-in">
+                    <a href="#projects" class="btn btn-primary">Ver Portafolio</a>
+                    <a href="assets/CV-Matias-Meira-Backend-Java.pdf" class="btn btn-outline" download>Descargar CV</a>
                 </div>
-
-                <h3>Trayectoria académica</h3>
-                <dl class="timeline">
-                    <div class="timeline-row">
-                        <dt>2026 (completado)</dt>
-                        <dd>Técnico Universitario en Informática — UNGS, Buenos Aires, Argentina</dd>
-                    </div>
-                    <div class="timeline-row">
-                        <dt>En curso</dt>
-                        <dd>Licenciatura en Sistemas — Univ. Nac. General Sarmiento</dd>
-                    </div>
-                </dl>
             </div>
         </section>
 
-        <section id="projects" class="projects section">
-            <div class="container">
-                <h2>Proyectos</h2>
-                <ul class="project-list">
-                    <li class="project-row">
-                        <div class="project-row-head">
-                            <h3>Canche.ar</h3>
+        <section id="about" class="snap-section about">
+            <div class="container about-large">
+                <h2 class="section-title fade-in">Sobre Mí</h2>
+                <div class="about-grid-expanded">
+                    <div class="about-text-content fade-in">
+                        <p>Desarrollador Backend con un fuerte enfoque en el ecosistema <strong>Java/SpringBoot</strong> y experiencia en implementaciones con <strong>Python/Django</strong>. Mi formación en la <strong>Universidad Nacional de General Sarmiento</strong> me ha permitido desarrollar una mentalidad analítica para la resolución de problemas complejos.</p>
+                        <p>Me especializo en transformar necesidades de negocio en sistemas técnicos escalables, priorizando siempre la integridad de los datos, la seguridad de la información y el rendimiento del servidor.</p>
+                    </div>
+                    <div class="education-card-large fade-in">
+                        <h3><svg class="icon" aria-hidden="true"><use href="#icon-graduation-cap"></use></svg> Trayectoria Académica</h3>
+                        <div class="edu-item-large highlight-border">
+                            <span class="year">2026 (Completado)</span>
+                            <p class="edu-title">Técnico Universitario en Informática</p>
+                            <p class="edu-school">UNGS - Buenos Aires, Argentina</p>
                         </div>
-                        <p class="project-desc">Plataforma de reservas y gestión de canchas deportivas para complejos en Argentina. Resuelve el problema de que un mismo espacio físico sirve para distintos deportes: reservar una cancha de fútbol 7 no puede bloquear el resto del pool para fútbol 5.</p>
-                        <p class="project-tags">Java 21 · Spring Boot 3 · Spring Security · PostgreSQL · Flyway · Docker</p>
-                        <details class="project-details">
-                            <summary>Ver decisiones técnicas</summary>
-                            <ul>
-                                <li>Muchos complejos tienen canchas que sirven para más de un deporte a la vez. Separé la cancha física de lo que necesita cada reserva, para no bloquear capacidad que en realidad está libre.</li>
-                                <li>Constraint de exclusión de PostgreSQL para impedir doble reserva a nivel de base de datos, no de aplicación.</li>
-                                <li>Autenticación dual (magic link o código de 6 dígitos) que preserva el contexto de la reserva en curso.</li>
-                            </ul>
-                        </details>
-                    </li>
-
-                    <li class="project-row">
-                        <div class="project-row-head">
-                            <h3>Gestión de Producción de Congelados</h3>
-                            <a href="https://github.com/matiasmeira/Frozen_Back" target="_blank" class="icon-link" aria-label="Repositorio en GitHub"><svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg></a>
+                        <div class="edu-item-large highlight-border secondary-border">
+                            <span class="year">En Curso</span>
+                            <p class="edu-title">Licenciatura en Sistemas</p>
+                            <p class="edu-school">Univ. Nac. General Sarmiento</p>
                         </div>
-                        <p class="project-label">Proyecto académico grupal · UNGS</p>
-                        <p class="project-desc">Sistema de gestión de producción para una empresa de alimentos congelados (caso de estudio de la cursada): controla el flujo desde el ingreso de materia prima hasta el despacho del producto terminado.</p>
-                        <p class="project-tags">Python · Django · PostgreSQL</p>
-                        <details class="project-details">
-                            <summary>Ver decisiones técnicas</summary>
-                            <ul>
-                                <li>Fichaje de empleados por reconocimiento facial: compara el vector facial capturado contra los vectores guardados calculando distancia euclídea, con un umbral de 0.6, en vez de pedir usuario y contraseña para marcar entrada o salida.</li>
-                                <li>Planificador diario que compara stock disponible contra demanda de ventas: si una orden de producción se atrasa por falta de materia prima, recalcula su fecha automáticamente y marca las ventas afectadas para revisión.</li>
-                                <li>Reserva de lotes de stock (producto terminado y materia prima) con criterio FIFO por fecha de vencimiento, para no dejar lotes por vencer sin usar mientras se consumen lotes más nuevos.</li>
-                            </ul>
-                            <p class="project-role">Trabajo grupal de cuatro personas. Mi aporte se concentró en los módulos de compras, reportes, despachos y materias primas.</p>
-                        </details>
-                    </li>
-
-                    <li class="project-row">
-                        <div class="project-row-head">
-                            <h3>API de Gestión de Liga Amateur</h3>
-                            <a href="https://github.com/matiasmeira/Generador-De-Plantillas-Liga-Futbol" target="_blank" class="icon-link" aria-label="Repositorio en GitHub"><svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg></a>
-                        </div>
-                        <p class="project-label">Proyecto personal</p>
-                        <p class="project-desc">Backend para gestionar equipos y jugadores de una liga de fútbol amateur: alta de equipos, alta de jugadores por equipo y autenticación de usuarios.</p>
-                        <p class="project-tags">Java 17 · Spring Boot 3.2 · Spring Security · JWT · PostgreSQL</p>
-                        <details class="project-details">
-                            <summary>Ver decisiones técnicas</summary>
-                            <ul>
-                                <li>Contraseñas hasheadas con BCrypt, y el secreto de firma HMAC del JWT se valida al arrancar la aplicación (falla si tiene menos de 32 caracteres) en vez de descubrirlo recién en producción.</li>
-                                <li>Regla de negocio de máximo 22 jugadores por equipo, validada en la capa de servicio antes de persistir.</li>
-                            </ul>
-                        </details>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="skills" class="skills section">
+        <section id="projects" class="snap-section projects">
             <div class="container">
-                <h2>Stack</h2>
-                <div class="skill-groups">
-                    <div class="skill-group">
-                        <h3>Backend</h3>
-                        <ul>
+                <h2 class="section-title fade-in">Proyectos de Ingeniería</h2>
+                <div class="projects-grid-detailed">
+                    <div class="project-card-detailed fade-in">
+                        <div class="card-body">
+                            <div class="project-header">
+                                <svg class="icon project-icon-top" aria-hidden="true"><use href="#icon-football"></use></svg>
+                            </div>
+                            <h3 class="title-white">Canche.ar</h3>
+                            <p class="project-desc">Plataforma de reservas y gestión de canchas deportivas para complejos en Argentina. Resuelve el problema de que un mismo espacio físico sirve para distintos deportes: reservar una cancha de fútbol 7 no puede bloquear el resto del pool para fútbol 5.</p>
+                            <details class="project-details">
+                                <summary>Ver decisiones técnicas</summary>
+                                <ul>
+                                    <li>Muchos complejos tienen canchas que sirven para más de un deporte a la vez. Separé la cancha física de lo que necesita cada reserva, para no bloquear capacidad que en realidad está libre.</li>
+                                    <li>Constraint de exclusión de PostgreSQL para impedir doble reserva a nivel de base de datos, no de aplicación.</li>
+                                    <li>Autenticación dual (magic link o código de 6 dígitos) que preserva el contexto de la reserva en curso.</li>
+                                </ul>
+                            </details>
+                        </div>
+                        <div class="card-footer">
+                            <div class="tech-tags">
+                                <span>Java 21</span><span>Spring Boot 3</span><span>Spring Security</span><span>PostgreSQL</span><span>Flyway</span><span>Docker</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card-detailed fade-in">
+                        <div class="card-body">
+                            <div class="project-header">
+                                <span class="project-label">Proyecto académico grupal · UNGS</span>
+                                <div class="project-links-top">
+                                    <a href="https://github.com/matiasmeira/Frozen_Back" target="_blank" title="Repo en GitHub" aria-label="Repositorio en GitHub"><svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg></a>
+                                </div>
+                            </div>
+                            <h3 class="title-white">Gestión de Producción de Congelados</h3>
+                            <p class="project-desc">Sistema de gestión de producción para una empresa de alimentos congelados (caso de estudio de la cursada): controla el flujo desde el ingreso de materia prima hasta el despacho del producto terminado.</p>
+                            <details class="project-details">
+                                <summary>Ver decisiones técnicas</summary>
+                                <ul>
+                                    <li>Fichaje de empleados por reconocimiento facial: compara el vector facial capturado contra los vectores guardados calculando distancia euclídea, con un umbral de 0.6, en vez de pedir usuario y contraseña para marcar entrada o salida.</li>
+                                    <li>Planificador diario que compara stock disponible contra demanda de ventas: si una orden de producción se atrasa por falta de materia prima, recalcula su fecha automáticamente y marca las ventas afectadas para revisión.</li>
+                                    <li>Reserva de lotes de stock (producto terminado y materia prima) con criterio FIFO por fecha de vencimiento, para no dejar lotes por vencer sin usar mientras se consumen lotes más nuevos.</li>
+                                </ul>
+                                <p class="project-role">Trabajo grupal de cuatro personas. Mi aporte se concentró en los módulos de compras, reportes, despachos y materias primas.</p>
+                            </details>
+                        </div>
+                        <div class="card-footer">
+                            <div class="tech-tags">
+                                <span>Python</span><span>Django</span><span>PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card-detailed fade-in">
+                        <div class="card-body">
+                            <div class="project-header">
+                                <span class="project-label">Proyecto personal</span>
+                                <div class="project-links-top">
+                                    <a href="https://github.com/matiasmeira/Generador-De-Plantillas-Liga-Futbol" target="_blank" title="Repo en GitHub" aria-label="Repositorio en GitHub"><svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg></a>
+                                </div>
+                            </div>
+                            <h3 class="title-white">API de Gestión de Liga Amateur</h3>
+                            <p class="project-desc">Backend para gestionar equipos y jugadores de una liga de fútbol amateur: alta de equipos, alta de jugadores por equipo y autenticación de usuarios.</p>
+                            <details class="project-details">
+                                <summary>Ver decisiones técnicas</summary>
+                                <ul>
+                                    <li>Contraseñas hasheadas con BCrypt, y el secreto de firma HMAC del JWT se valida al arrancar la aplicación (falla si tiene menos de 32 caracteres) en vez de descubrirlo recién en producción.</li>
+                                    <li>Regla de negocio de máximo 22 jugadores por equipo, validada en la capa de servicio antes de persistir.</li>
+                                </ul>
+                            </details>
+                        </div>
+                        <div class="card-footer">
+                            <div class="tech-tags">
+                                <span>Java 17</span><span>Spring Boot 3.2</span><span>Spring Security</span><span>JWT</span><span>PostgreSQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="snap-section skills">
+            <div class="container">
+                <h2 class="section-title text-center fade-in">Stack Tecnológico</h2>
+                <div class="skills-categories">
+                    <div class="skill-category fade-in">
+                        <h3 class="skill-category-title">Backend</h3>
+                        <ul class="skill-list">
                             <li><span class="skill-name">Java 21 / Spring Boot 3</span><span class="skill-usage">Canche.ar, API de Gestión de Liga Amateur</span></li>
                             <li><span class="skill-name">Python / Django</span><span class="skill-usage">Gestión de Producción de Congelados</span></li>
                         </ul>
                     </div>
-                    <div class="skill-group">
-                        <h3>Seguridad</h3>
-                        <ul>
+                    <div class="skill-category fade-in">
+                        <h3 class="skill-category-title">Seguridad</h3>
+                        <ul class="skill-list">
                             <li><span class="skill-name">Spring Security + JWT</span><span class="skill-usage">Canche.ar (refresh tokens), API de Gestión de Liga Amateur (BCrypt)</span></li>
                         </ul>
                     </div>
-                    <div class="skill-group">
-                        <h3>Persistencia</h3>
-                        <ul>
+                    <div class="skill-category fade-in">
+                        <h3 class="skill-category-title">Persistencia</h3>
+                        <ul class="skill-list">
                             <li><span class="skill-name">PostgreSQL</span><span class="skill-usage">Canche.ar, Gestión de Producción, API de Gestión de Liga Amateur</span></li>
                             <li><span class="skill-name">Flyway</span><span class="skill-usage">Canche.ar</span></li>
                         </ul>
                     </div>
-                    <div class="skill-group">
-                        <h3>Infraestructura</h3>
-                        <ul>
+                    <div class="skill-category fade-in">
+                        <h3 class="skill-category-title">Infraestructura</h3>
+                        <ul class="skill-list">
                             <li><span class="skill-name">Docker (multi-stage)</span><span class="skill-usage">Canche.ar</span></li>
                             <li><span class="skill-name">GitHub Actions</span><span class="skill-usage">Canche.ar</span></li>
                             <li><span class="skill-name">Sentry</span><span class="skill-usage">Canche.ar</span></li>
@@ -249,43 +279,42 @@
             </div>
         </section>
 
-        <section id="contact" class="contact section">
-            <div class="container">
-                <h2>Contacto</h2>
-                <p class="contact-subtitle">¿Buscás sumar un desarrollador backend a tu equipo? Mi bandeja de entrada siempre está abierta.</p>
-
-                <ul class="contact-links">
-                    <li><a href="assets/CV-Matias-Meira-Backend-Java.pdf" download><svg class="icon" aria-hidden="true"><use href="#icon-download"></use></svg> Descargar CV</a></li>
-                    <li><a href="mailto:matiasezequielmeira@gmail.com"><svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg> matiasezequielmeira@gmail.com</a></li>
-                    <li><a href="https://linkedin.com/in/matias-ezequiel-meira-b949642a5/" target="_blank"><svg class="icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg> LinkedIn</a></li>
-                    <li><a href="https://github.com/matiasmeira" target="_blank"><svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg> GitHub</a></li>
-                </ul>
-
-                <form id="contact-form" action="https://formspree.io/f/xqednebn" method="POST" class="contact-form">
-                    <div class="field">
-                        <label for="contact-name" class="visually-hidden">Tu nombre</label>
-                        <input type="text" id="contact-name" name="name" placeholder="Nombre" autocomplete="name" required>
+        <section id="contact" class="snap-section contact">
+            <div class="container contact-container">
+                <div class="contact-grid">
+                    <div class="contact-info fade-in">
+                        <h2 class="section-title">Contacto</h2>
+                        <p class="contact-subtitle">¿Buscas sumar un desarrollador backend a tu equipo? Mi bandeja de entrada siempre está abierta. Ya sea que tengas una pregunta o simplemente quieras saludar, ¡haré lo posible por responderte!</p>
+                        <div class="contact-links-vertical">
+                            <a href="assets/CV-Matias-Meira-Backend-Java.pdf" download><svg class="icon" aria-hidden="true"><use href="#icon-download"></use></svg> Descargar CV</a>
+                            <a href="mailto:matiasezequielmeira@gmail.com"><svg class="icon" aria-hidden="true"><use href="#icon-mail"></use></svg> matiasezequielmeira@gmail.com</a>
+                            <a href="https://linkedin.com/in/matias-ezequiel-meira-b949642a5/" target="_blank"><svg class="icon" aria-hidden="true"><use href="#icon-linkedin"></use></svg> LinkedIn</a>
+                            <a href="https://github.com/matiasmeira" target="_blank"><svg class="icon" aria-hidden="true"><use href="#icon-github"></use></svg> GitHub</a>
+                        </div>
                     </div>
-                    <div class="field">
-                        <label for="contact-email" class="visually-hidden">Tu email</label>
-                        <input type="email" id="contact-email" name="email" placeholder="Email" autocomplete="email" required>
-                    </div>
-                    <div class="field">
-                        <label for="contact-message" class="visually-hidden">Tu mensaje</label>
-                        <textarea id="contact-message" name="message" placeholder="Mensaje" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-                    <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
-                </form>
+                    <form id="contact-form" action="https://formspree.io/f/xqednebn" method="POST" class="contact-form fade-in">
+                        <div class="input-group">
+                            <label for="contact-name" class="visually-hidden">Tu nombre</label>
+                            <input type="text" id="contact-name" name="name" placeholder="Tu Nombre" autocomplete="name" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="contact-email" class="visually-hidden">Tu email</label>
+                            <input type="email" id="contact-email" name="email" placeholder="Tu Email" autocomplete="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="contact-message" class="visually-hidden">Tu mensaje</label>
+                            <textarea id="contact-message" name="message" placeholder="¿En qué puedo ayudarte?" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
+                        <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+                <footer class="footer-snap fade-in">
+                    <p>Diseñado &amp; Construido por Matias Ezequiel Meira &copy; 2026</p>
+                </footer>
             </div>
         </section>
     </main>
-
-    <footer class="site-footer">
-        <div class="container">
-            <p>Matias Ezequiel Meira &copy; 2026</p>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>
