@@ -231,6 +231,9 @@ h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); color: var(--text-heading); font-wei
 .title-white { color: var(--text-heading); font-size: 1.3rem; margin-bottom: 0.5rem; }
 .project-label { display: block; font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 1rem; }
 .project-desc { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; }
+.project-status { margin-top: 0.75rem; font-family: var(--font-code); font-size: 0.85rem; color: var(--text-secondary); }
+.project-status a { color: var(--accent); }
+.project-details code { font-family: var(--font-code); font-size: 0.85em; color: var(--text-primary); }
 .card-footer { padding: 0 2rem 2rem 2rem; }
 .tech-tags { display: flex; gap: 1rem; flex-wrap: wrap; font-family: var(--font-code); font-size: 0.8rem; color: var(--accent); }
 

@@ -175,7 +175,8 @@
                                 </div>
                             </div>
                             <h3 class="title-white">Canche.ar</h3>
-                            <p class="project-desc">Plataforma de reservas y gestión de canchas deportivas para complejos en Argentina. Resuelve el problema de que un mismo espacio físico sirve para distintos deportes: reservar una cancha de fútbol 7 no puede bloquear el resto del pool para fútbol 5.</p>
+                            <p class="project-desc">Plataforma de reservas y gestión de canchas deportivas para complejos en Argentina. Los jugadores buscan y reservan online; el complejo maneja agenda, turnos fijos, caja, buffet, gastos, empleados y reportes en el mismo sistema. El problema de fondo: un mismo espacio físico sirve para distintos deportes, y reservar una cancha de fútbol 7 no puede bloquear capacidad que sigue libre para fútbol 5.</p>
+                            <p class="project-status">En producción en <a href="https://www.canche.ar" target="_blank" rel="noopener">www.canche.ar</a></p>
                             <details class="project-details">
                                 <summary>Ver decisiones técnicas</summary>
                                 <div class="project-screens">
@@ -193,15 +194,20 @@
                                     </figure>
                                 </div>
                                 <ul>
-                                    <li>Muchos complejos tienen canchas que sirven para más de un deporte a la vez. Separé la cancha física de lo que necesita cada reserva, para no bloquear capacidad que en realidad está libre.</li>
-                                    <li>Constraint de exclusión de PostgreSQL para impedir doble reserva a nivel de base de datos, no de aplicación.</li>
-                                    <li>Autenticación dual (magic link o código de 6 dígitos) que preserva el contexto de la reserva en curso.</li>
+                                    <li>Separé la cancha física de lo que consume cada reserva: una cancha de fútbol 7 se arma con dos de fútbol 5, y la disponibilidad se calcula sobre ese modelo para no bloquear capacidad que en realidad está libre.</li>
+                                    <li>Doble reserva prevenida en dos capas: lock pesimista sobre todas las canchas del pool afectado, tomado en orden de id para evitar deadlocks, y un constraint <code>EXCLUDE USING gist</code> de PostgreSQL como red a nivel base de datos. Tests de concurrencia contra un Postgres real con Testcontainers.</li>
+                                    <li>Seña con pre-reserva que retiene el turno 10 minutos: un job libera las vencidas y la disponibilidad ya las trata como libres antes de que corra. La seña depende del plan del complejo.</li>
+                                    <li>Turnos fijos semanales modelados como regla más ocurrencias: la serie se renueva o se cancela como unidad y pasa por las mismas validaciones que una reserva puntual.</li>
+                                    <li>Modo Caja para el mostrador: la PC se empareja con un código de un solo uso y cada empleado entra con su PIN, con permisos por acción. Caja con cierre y arqueo, alimentada por cobros, ventas del buffet y gastos, y reportes de facturación y ocupación.</li>
+                                    <li>Autorización centralizada y cubierta con tests HTTP con JWT real; un test por reflexión falla si un endpoint nuevo no declara <code>@PreAuthorize</code>. <code>Idempotency-Key</code> obligatorio en reservas y ventas, y rate limiting en login y registro.</li>
+                                    <li>Registro en 2 pasos con verificación de mail (link o código de 6 dígitos) que preserva el contexto de la reserva en curso.</li>
                                 </ul>
+                                <p class="project-role">Backend: 14 módulos de dominio, 28 migraciones Flyway y más de 1.700 tests, con CI en GitHub Actions. Frontend: 43 rutas en Next.js 16 y 253 tests en Vitest.</p>
                             </details>
                         </div>
                         <div class="card-footer">
                             <div class="tech-tags">
-                                <span>Java 21</span><span>Spring Boot 3</span><span>Spring Security</span><span>PostgreSQL</span><span>Flyway</span><span>Docker</span>
+                                <span>Java 21</span><span>Spring Boot 3.5</span><span>Spring Security</span><span>PostgreSQL</span><span>Flyway</span><span>Testcontainers</span><span>Docker</span><span>Next.js 16</span><span>TanStack Query</span>
                             </div>
                         </div>
                     </div>
@@ -275,7 +281,7 @@
                     <div class="skill-category fade-in">
                         <h3 class="skill-category-title">Seguridad</h3>
                         <ul class="skill-list">
-                            <li><span class="skill-name">Spring Security + JWT</span><span class="skill-usage">Canche.ar (refresh tokens), API de Gestión de Liga Amateur (BCrypt)</span></li>
+                            <li><span class="skill-name">Spring Security + JWT</span><span class="skill-usage">Canche.ar (revocación de JWT por versión de token), API de Gestión de Liga Amateur (BCrypt)</span></li>
                         </ul>
                     </div>
                     <div class="skill-category fade-in">
